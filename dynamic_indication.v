@@ -2,7 +2,7 @@ module dynamic_indication
     #(parameter BCD_DIGITS = 3,  // number of displayed BCD digits
       parameter BCD_LEN    = 12, // BCD code width
       parameter SSEG       = 7,  // seven seg width
-      parameter NUM_LEN    = 4)  // number width in BCD coder 
+      parameter NUM_LEN    = 4)  // number in BCD code (width)
     (CLK, RST_n, I_ST, I_BCD, I_BUSY,
      O_MUX_HEX, O_HEX);
    

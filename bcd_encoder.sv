@@ -22,7 +22,7 @@ module bcd_encoder
     output wire               O_BUSY; // busy converting binary to BCD 
     output wire [BCD_LEN-1:0] O_BCD;  // distance to object in BCD code
 //  internal signals
-    logic [$clog2(BINARY_LEN)-1:0] scnt;    // counter for binary code widht
+    logic [$clog2(BINARY_LEN)-1:0] scnt;    // binary conversion counter width
     logic [SCRATCH_LEN-1:0]        scratch; // widht BCD + BINARY
     logic [BCD_LEN-1:0]            bcd;
     logic [BCD_LEN-1:0]            bcd_carry; 

@@ -11,7 +11,7 @@ module hc_sr04_fsm
 //  description states FSM      
     localparam ST_SZ      = 6;         // number of states FSM
     localparam IDLE       = 6'b000001; // waiting I_EN 
-    localparam TRIG       = 6'b000010; // trigger input to module
+    localparam TRIG       = 6'b000010; // trigger to HC-SR04
     localparam WT_ECHO    = 6'b000100; // waiting echo from HC-SR04  
     localparam CNT_ECHO   = 6'b001000; // time count when echo is high level
     localparam CONV       = 6'b010000; // convert binary code to bsd
@@ -21,7 +21,7 @@ module hc_sr04_fsm
     input wire RST_n;  // asynchronous reset_n
     input wire I_EN;   // enable measurement distance
     input wire I_ST;   // impulse strobe onсe in 58.82 uS
-    input wire I_ECHO; // input  lever signal and the range in proportion
+    input wire I_ECHO; // input lever signal and the range in proportion
 //  output signals
     output reg [DST_SZ-1:0] O_DST;  // distance to object in binary code
     output reg              O_CONV; // signal start converting binary to BCD
@@ -32,7 +32,7 @@ module hc_sr04_fsm
     reg [ST_SZ-1:0]        nx_st;       // next state of FSM   
     reg [CNT_CCL_TIME-1:0] cnt_i_st;    // counter pulse strobe 
     reg [CNT_CCL_TIME-1:0] nx_cnt_i_st; // next counter pulse strobe
-    reg                    echo_d0;     // signal0 sync I_ECHO
+    reg                    echo_d0;     // signal0 I_ECHO from HC-SR04
     reg                    echo_sync;   // synchronized signal I_ECHO
     reg [DST_SZ-1:0]       cnt_echo;    // counter signal echo_sync
     reg [DST_SZ-1:0]       nx_cnt_echo; // next counter signal echo_sync
