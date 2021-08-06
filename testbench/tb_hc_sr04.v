@@ -1,10 +1,5 @@
-// Verilog Test Bench template for design : HC_SR04_DE10
-// 
-// Simulation tool : ModelSim-Altera (Verilog)
-// 
-
 `timescale 10 ns/ 1 ns
-module HC_SR04_vlg_tst();
+module tb_hc_sr04;
     parameter BCD_DIGITS = 3;                    // number of displayed BCD digits
     parameter SSEG       = 7;                    // widht seven seg      
     parameter MAX_RANGE  = 400;                  // maximum measuring range
@@ -28,7 +23,7 @@ module HC_SR04_vlg_tst();
     wire                  O_FL;      // measurement flag 
 
 //------------------------------------------------------
-    HC_SR04 dut 
+    top_hc_sr04 dut 
         (
          .CLK(CLK),
          .RST_n(RST_n),
@@ -63,11 +58,10 @@ module HC_SR04_vlg_tst();
 
     always #1 CLK = ~CLK;
 
-    // initial begin
+    initial begin
       // $dumpvars;
-    // end 
+      #10200000 $finish;
+    end 
     
-    initial
-    #10200000 $finish;
     
 endmodule

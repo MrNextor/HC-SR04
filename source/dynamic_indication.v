@@ -31,7 +31,6 @@ module dynamic_indication
     wire                   en_di;       // enable dynamic indication
     wire [NUM_LEN-1:0]     no_signal;   // no dynamic indication
 
-
 //------------------------------------------------------- 
     assign no_signal = {NUM_LEN{1'b1}};             // set the absence of a signal for the common cathode    
     assign ld_bcd = ~cr_i_busy & pr_i_busy;         // load I_BCD

@@ -18,14 +18,13 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-# Date created = 14:18:47  July 31, 2021
+# Date created = 22:41:13  August 06, 2021
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "18.1"
-DATE = "14:18:47  July 31, 2021"
+DATE = "22:41:13  August 06, 2021"
 
 # Revisions
 
-PROJECT_REVISION = "HC_SR04"
-PROJECT_REVISION = "HC_SR04_DE10"
+PROJECT_REVISION = "top_hc_sr04"

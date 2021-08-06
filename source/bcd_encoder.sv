@@ -31,7 +31,6 @@ module bcd_encoder
     logic                          pr_i_conv;
     logic                          rs_i_conv;
 
-
 //-------------------------------------------------------
     assign bcd = scratch[SCRATCH_LEN-1:SCRATCH_LEN-BCD_LEN];
     assign rs_i_conv = cr_i_conv & !pr_i_conv;

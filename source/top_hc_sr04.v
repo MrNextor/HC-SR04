@@ -1,4 +1,4 @@
-module HC_SR04
+module top_hc_sr04
     #(parameter BCD_DIGITS = 3, // number of displayed BCD digits
       parameter SSEG       = 7) // width seven seg
     (CLK, RST_n, I_EN, I_ECHO,
